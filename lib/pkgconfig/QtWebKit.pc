@@ -1,0 +1,19 @@
+prefix=/opt/qt-4.7.3-arm64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/QtWebKit
+qt_config=lex yacc uic resources qt release incremental link_prl def_files_disabled no_mocdepend release stl qt_no_framework cross_compile release shared dll embedded largefile stl exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build building-libs depend_includepath standalone_package depend_includepath embedded qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_libtool create_pc link_pkgconfig no_debug_info moc thread shared dll
+moc_location=/opt/qt-4.7.3-arm64/bin/moc
+uic_location=/opt/qt-4.7.3-arm64/bin/uic
+rcc_location=/opt/qt-4.7.3-arm64/bin/rcc
+lupdate_location=/opt/qt-4.7.3-arm64/bin/lupdate
+lrelease_location=/opt/qt-4.7.3-arm64/bin/lrelease
+
+Name: Qtwebkit
+Description: Qtwebkit Library
+Version: 4.7.3
+Libs: -L${libdir} -lQtWebKit 
+Libs.private: -L/opt/qt-4.7.3-arm64/lib -L../JavaScriptCore/release  -ljscore -L/opt/qt-4.7.3-arm64/lib -lQtGui -lQtNetwork -lQtCore -lpthread   
+Cflags: -DQT_SHARED -I/opt/qt-4.7.3-arm64/include -I${includedir}
+Requires: QtCore QtGui QtNetwork
+
